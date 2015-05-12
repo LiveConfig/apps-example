@@ -1,0 +1,48 @@
+{ "version":1,
+  "repo":[
+    { "id":1,
+      "rev":1,
+      "name":"Test",
+      "icon":"ico-test.png"
+    }
+  ],
+  "versions":[
+    { "id":1,
+      "rev":2,
+      "appid":1,
+      "version_str":"4.2",
+      "version_major":4,
+      "version_minor":2,
+      "version_patch":0,
+      "version_extra":0,
+      "inst_name":"wai-test-4.2-1.php",
+      "inst_sha1":"4cc84414b0a51521639f0fe1b8778c5b8dae58f4",
+      "inst_version":1,
+      "release_date":"2015-04-23 00:00:00",
+      "rq_mysql_min":"5.0",
+      "rq_mysql_max":null,
+      "rq_php_min":"5.2",
+      "rq_php_max":null
+    }
+  ],
+  "texts":[
+    { "id":1,
+      "rev":1,
+      "appid":1,
+      "lang":"de",
+      "title":"WordPress TEST",
+      "desc_short":"Blog\/CMS",
+      "desc_long":"WordPress ist eine sehr leicht zu bedienende aber gleichzeitig flexible und erweiterbare Software zur Verwaltung der Inhalte einer Website. Häufig wird WordPress für Weblogs (Blogs) eingesetzt, aber auch \"normale\" Websites lassen sich damit einfach und schnell realisieren.",
+      "vendor_url":"http:\/\/www.wordpress.org"
+    },{
+      "id":2,
+      "rev":1,
+      "appid":1,
+      "lang":"en",
+      "title":"WordPress TEST",
+      "desc_short":"Blog\/CMS",
+      "desc_long":"WordPress is a simple to use and flexible software to manage website contents. Mostly it is used for weblogs (blogs), but also \"normal\" websites can be built with WordPress fast and easily.",
+      "vendor_url":"http:\/\/www.wordpress.org"
+    }
+  ]
+}
