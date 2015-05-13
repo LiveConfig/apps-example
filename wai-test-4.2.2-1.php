@@ -106,8 +106,7 @@ exit;
 function wai_install() {
   global $LCWAI_DOWNLOADS;
   global $installer;
-  //entpacken
-  //installations vorgang durchführen
+
   if(($vars = $installer->get_env_vars(array('LC_DST', 'LC_SRC', 'LC_LANG', 'LC_MYSQL_DB', 'LC_MYSQL_USER', 'LC_MYSQL_PW', 'LC_MYSQL_HOST', 'LC_RUN_AS_USER'), array('MYSQL_PORT'))) === false) {
     return;
   }
@@ -122,6 +121,7 @@ function wai_install() {
     $lang = 'en';
   }
 
+  // extract files from downloaded package
   if($installer->package_extract($vars['LC_DST'], $vars['LC_SRC'].'/'.$LCWAI_DOWNLOADS[$lang]['PACKAGE']['NAME']) === false) {
     return;
   }
@@ -130,7 +130,7 @@ function wai_install() {
     return;
   }
 
-  //create settings file
+  // create configuration file
   $cfg_src_file = $vars['LC_DST'].'/wp-config-sample.php';
   $cfg_dst_file = $vars['LC_DST'].'/wp-config.php';
 
@@ -175,7 +175,7 @@ function wai_install() {
   }
 
   if($vars['LC_RUN_AS_USER'] == "no") {
-    //ToDo: chmod files directory o+w
+    // ToDo: chmod files directory o+w
     if($installer->chmod($vars['LC_DST'].'/wp-content', 0666, 0777, true) === false) {
       print "ERROR failed to chmod wp-content directory!\n";
       return;
@@ -191,7 +191,7 @@ function wai_install() {
 
 /*
  * wai_uninstall()
- *   deinstalls the package
+ *   uninstall the package
  */
 function wai_uninstall() {
   global $installer;
@@ -208,7 +208,7 @@ function wai_uninstall() {
 
 /*
  * wai_getversion()
- *   returns the current installed package version
+ *   return the installed package version
  */
 function wai_getversion() {
   global $installer;
